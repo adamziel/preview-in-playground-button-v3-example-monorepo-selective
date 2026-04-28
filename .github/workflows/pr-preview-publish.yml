@@ -5,8 +5,15 @@ on:
     workflows: ["PR Preview - Build"]
     types: [completed]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   publish:
+    permissions:
+      contents: write
+      pull-requests: write
     uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-publish.yml@adamziel/build-command-reusable-workflows
     with:
       blueprint-from-artifact: true
