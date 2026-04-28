@@ -9,6 +9,7 @@ jobs:
     uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-build.yml@adamziel/build-command-reusable-workflows
     with:
       # Always produce both zips; the blueprint decides which to install.
+      fetch-depth: 0
       artifacts: |
         alpha=build/alpha.zip
         beta=build/beta.zip
