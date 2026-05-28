@@ -10,3 +10,5 @@ add_action('admin_notices', function () {
 });
 
 // Fork smoke test: v3 preview workflows.
+
+// Fork smoke rerun after v3 fork verification fix.
