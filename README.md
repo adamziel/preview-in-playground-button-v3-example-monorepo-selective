@@ -1,6 +1,6 @@
 # preview-in-playground-button-v3-example-monorepo-selective
 
-Level 3 example of the WordPress Playground "Preview in Playground" v3 reusable workflows.
+Level 3 example of the WordPress Playground "Preview in Playground" v4 reusable workflows.
 
 A monorepo with two plugins (`alpha`, `beta`) where each PR's preview installs **only the plugins touched by that PR**. Demonstrates the `blueprint-from-artifact: true` mode: the build script computes the diff against the base ref, generates a tailored `blueprint.json`, and the publish workflow renders it with `{{ARTIFACT_URL:<name>}}` substituted in.
 
@@ -16,6 +16,6 @@ A monorepo with two plugins (`alpha`, `beta`) where each PR's preview installs *
 - `.github/workflows/pr-preview-build.yml` — always builds both zips, generates a per-PR `blueprint.json`.
 - `.github/workflows/pr-preview-publish.yml` — reads that blueprint from the artifact bundle.
 
-The reusable workflows are pinned to the in-development branch
-`adamziel/build-command-reusable-workflows` of
-`WordPress/action-wp-playground-pr-preview`. Repin to `@v3` once that lands.
+Both reusable workflows use the v4 release candidate from
+`WordPress/action-wp-playground-pr-preview` at `1b15093d61b5e98cdfeb31466f34ade495762cd7`.
+The repository name retains `v3` so existing links keep working.

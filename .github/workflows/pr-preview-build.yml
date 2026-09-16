@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-build.yml@v3
+    uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-build.yml@1b15093d61b5e98cdfeb31466f34ade495762cd7
     with:
       # Always produce both zips; the blueprint decides which to install.
       fetch-depth: 0
@@ -35,7 +35,7 @@ jobs:
         const slugs = changed.length ? changed : ['alpha', 'beta'];
         const steps = slugs.map((slug) => ({
           step: 'installPlugin',
-          pluginZipFile: { resource: 'url', url: '{{ARTIFACT_URL:' + slug + '}}' },
+          pluginData: { resource: 'url', url: '{{ARTIFACT_URL:' + slug + '}}' },
           options: { activate: true },
         }));
         process.stdout.write(JSON.stringify({
