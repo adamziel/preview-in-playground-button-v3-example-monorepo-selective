@@ -16,6 +16,6 @@ A monorepo with two plugins (`alpha`, `beta`) where each PR's preview installs *
 - `.github/workflows/pr-preview-build.yml` — always builds both zips, generates a per-PR `blueprint.json`.
 - `.github/workflows/pr-preview-publish.yml` — reads that blueprint from the artifact bundle.
 
-Both reusable workflows use the v4 release candidate from
-`WordPress/action-wp-playground-pr-preview` at `1b15093d61b5e98cdfeb31466f34ade495762cd7`.
+Both reusable workflows use `WordPress/action-wp-playground-pr-preview` at `@v4`.
+Update the build and publish references together when changing versions.
 The repository name retains `v3` so existing links keep working.
