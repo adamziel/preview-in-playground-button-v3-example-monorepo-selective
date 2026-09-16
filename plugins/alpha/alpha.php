@@ -8,3 +8,11 @@
 add_action('admin_notices', function () {
     echo '<div class="notice notice-warning"><p><strong>Alpha</strong> is active.</p></div>';
 });
+
+// Fork smoke test: v3 preview workflows.
+
+// Fork smoke rerun after v3 fork verification fix.
+
+// Fork smoke rerun against the published v3 tag.
+
+// Fork smoke rerun against corrected @v3 workflow refs.
